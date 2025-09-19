@@ -1,3 +1,8 @@
+RUFF = poetry run ruff
+SRC = thalex tests examples
+RUFF_CFG = ./pyproject.toml
+
+
 .PHONY: clean
 clean: clean-build clean-pyc clean-test clean-docs
 
@@ -44,11 +49,13 @@ tests:
 	poetry run pytest tests -vv --reruns 3 --reruns-delay 3
 
 fmt:
-	poetry run ruff format thalex tests examples
-	poetry run ruff check thalex tests examples --fix
+	$(RUFF) --config $(RUFF_CFG) format $(SRC)
+	$(RUFF) --config $(RUFF_CFG) check $(SRC) --fix --no-cache
 
 lint:
-	poetry run ruff check thalex tests examples
+	$(RUFF) --config $(RUFF_CFG) format --check $(SRC)
+	$(RUFF) --config $(RUFF_CFG) check $(SRC) --no-fix --no-cache
+
 
 all: fmt lint tests
 
