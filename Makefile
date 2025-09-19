@@ -44,11 +44,11 @@ tests:
 	poetry run pytest tests -vv --reruns 3 --reruns-delay 3
 
 fmt:
-	poetry run ruff format thalex examples
-	poetry run ruff check thalex examples --fix
+	poetry run ruff format thalex tests examples
+	poetry run ruff check thalex tests examples --fix
 
 lint:
-	poetry run ruff check thalex examples
+	poetry run ruff check thalex tests examples
 
 all: fmt lint tests
 

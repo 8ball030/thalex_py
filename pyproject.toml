@@ -19,6 +19,7 @@ dependencies = [
     "websockets>=14.1",
     "PyJWT>=2.8.0",
     "cryptography>=42.0.5",
+    "pytest (>=8.4.2,<9.0.0)",
 ]
 license = {file = "LICENSE"}
 
@@ -41,6 +42,8 @@ packages = ["thalex"]
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.13.1"
 tbump = "^6.11.0"
+pytest-rerun = "^0.0.1"
+pytest-rerunfailures = "^16.0.1"
 
 [tool.ruff]
 line-length = 120
