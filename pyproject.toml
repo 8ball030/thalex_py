@@ -78,9 +78,6 @@ select = [
 ]
 ignore = ["E501"]
 
-[tool.ruff.lint.isort]
-split-on-trailing-comma = true
-
 [tool.ruff.format]
 line-ending = "auto"
 quote-style = "preserve"
