@@ -56,7 +56,6 @@ lint:
 	$(RUFF) --config $(RUFF_CFG) format --check $(SRC)
 	$(RUFF) --config $(RUFF_CFG) check $(SRC) --no-fix --no-cache
 
-
 all: fmt lint tests
 
 test-docs:

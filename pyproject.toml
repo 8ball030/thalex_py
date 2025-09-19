@@ -68,7 +68,7 @@ select = [
   "E",   # pycodestyle errors
   "W",   # pycodestyle warnings
   "F",   # pyflakes
-  "I",   # isort
+#  "I",   # isort
 #  "B",   # flake8-bugbear
 #  "UP",  # pyupgrade
 #  "C4",  # flake8-comprehensions
@@ -77,9 +77,6 @@ select = [
 #  "RUF", # Ruff-specific rules
 ]
 ignore = ["E501"]
-
-[tool.ruff.lint.isort]
-split-on-trailing-comma = true
 
 [tool.ruff.format]
 line-ending = "auto"
